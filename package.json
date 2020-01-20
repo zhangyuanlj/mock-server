@@ -1,6 +1,6 @@
 {
   "name": "mini-mock-server",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Based on express front-end interface service",
   "main": "./src/server.js",
   "dependencies": {
