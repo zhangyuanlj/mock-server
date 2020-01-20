@@ -1,6 +1,13 @@
 const Mock = require("mockjs");
-const response = require("../response");
 const resBody = [];
+const response = (code, resBody, message) => {
+  // return resBody;
+  return {
+    code: code,
+    body: resBody,
+    message: message
+  };
+};
 for (let i = 0; i < 50; i++) {
   const title = Mock.mock({
     "array|1": ["iPhone 12要涨价？5G组件使其成本增加80美元", "一亿像素加持 卢伟冰暗示小米10将屠榜DxOMark", "荣耀与小米互怼错杀 OV韬光养晦才是大敌"]

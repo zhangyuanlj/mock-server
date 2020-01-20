@@ -1,13 +1,16 @@
-const path = require("path");
+const {
+  resolve
+} = require('path');
 const express = require("express");
-const config = require("./config");
+const dirRoot = resolve('./');
+const config = require(`${dirRoot}/mock/config`);
 const align = require("align-text");
 const log = require("./utils/log");
 const createApi = require("./createApi");
 const app = express();
 const showList = createApi(app);
-app.use(express.static(path.join(__dirname, `../${config.static}`)));
-const server = app.listen(config.port, config.host, function() {
+app.use('/', express.static(`${dirRoot}/${config.static}`));
+const server = app.listen(config.port, config.host, function () {
   let maxCharNum = 0;
   log(
     `[api-server-info] api-server is listening at http://${
