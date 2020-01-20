@@ -1,12 +1,12 @@
-#mock-server
-Based on express front-end interface service.
+<h1>mock-server</h1>
+<p>Based on express front-end interface service.</p>
 
-#####快速上手
+<h3>快速上手</h3>
 
 > npm i
 > npm run api-server
 
-#####服务配置
+<h3>服务配置</h3>
 
 > 修改 src/config.js 中的配置
 > {
@@ -14,7 +14,7 @@ Based on express front-end interface service.
 > port: 3000 //端口
 > }
 
-#####创建接口
+<h3>创建接口</h3>
 
 > 1.在 api 目录下创建一个脚本文件，控制台会输出你创建文件的路径生成一个接口地址,例如：http://127.0.0.1:3000/test-api；如果你的接口包含层级关系，直接根据你的层级关系在api目录下创建相应的目录即可。
 > 2.脚本文件中直接返回一个对象，该对象为：
@@ -34,3 +34,19 @@ Based on express front-end interface service.
 > 3.mock-server默认支持restful风格，如果你想创建非restful风格的接口，请在你的脚本中引用response模块，并调用响应的方法，例如：
 > const response = require("../response");
 > const resData = response(200, resBody, "数据获取成功");
+
+<h3>nodemon.json</h3>
+
+> 1.nodemon为node服务的自动重启工具，根目录nodemon.json为这个工具的配置文件
+> //nodemon忽略的目录
+> "ignore": [
+>    ".git",
+>    ".svn",
+>    "node_modules/**/node_modules"
+> ]
+> //nodemon监听的目录
+> watch: [
+>    "src"
+> ]
+> //监听文件后缀名，用空格隔开
+> "ext": "js json"
