@@ -1,4 +1,4 @@
-<h1>mock-server</h1>
+<h1>mini-mock-server</h1>
 
 > Based on express front-end interface service.
 
